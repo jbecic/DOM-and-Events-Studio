@@ -1,6 +1,6 @@
 // Write your JavaScript code here.
 // Remember to pay attention to page loading!
-function init () {
+function init() {
     const takeOff = document.getElementById('takeOff');
     const flightStatus = document.getElementById('flightStatus');
 
