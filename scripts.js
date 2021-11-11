@@ -5,8 +5,6 @@ function init() {
     const flightStatus = document.getElementById('flightStatus');
 
     takeOff.addEventListener('click', event => {
-        flightStatus.innerHTML = 'This is a test';
-        
         let response = window.confirm('Confirm that the shuttle is ready for takeoff.');
         let str;
         if (response === true) {
