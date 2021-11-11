@@ -16,14 +16,14 @@ function init() {
             shuttleBackground.style.backgroundColor = 'blue';
             spaceShuttleHeight.innerHTML = '10,000';
         }
-    })
+    });
 
     land.addEventListener('click', () => {
         window.alert('The shuttle is landing. Landing gear engaged.');
         flightStatus.innerHTML = 'The shuttle has landed.';
         shuttleBackground.style.backgroundColor = 'green';
         spaceShuttleHeight.innerHTML = '0';
-    })
+    });
 
     missionAbort.addEventListener('click', () => {
         let response = window.confirm('Confirm that you want to abort the mission.');
@@ -33,7 +33,7 @@ function init() {
             shuttleBackground.style.backgroundColor = 'green';
             spaceShuttleHeight.innerHTML = '0';
         }
-    })
+    });
 }
 
 
