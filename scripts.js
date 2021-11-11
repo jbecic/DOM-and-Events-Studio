@@ -1,7 +1,7 @@
 // Write your JavaScript code here.
 // Remember to pay attention to page loading!
 function init() {
-    const takeOff = document.getElementById('takeOff');
+    const takeOff = document.getElementById('takeoff');
     const land = document.getElementById('landing');
     const missionAbort = document.getElementById('missionAbort');
     const flightStatus = document.getElementById('flightStatus');
