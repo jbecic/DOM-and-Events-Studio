@@ -8,10 +8,9 @@ function init() {
 
     takeOff.addEventListener('click', event => {
         let response = window.confirm('Confirm that the shuttle is ready for takeoff.');
-        let str;
+
         if (response === true) {
-            str = 'Shuttle in flight.';
-            flightStatus.innerHTML = str;
+            flightStatus.innerHTML = 'Shuttle in flight.';
             shuttleBackground.style.backgroundColor = 'blue';
             spaceShuttleHeight.innerHTML = '10,000';
         }
