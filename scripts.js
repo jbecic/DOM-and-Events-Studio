@@ -45,14 +45,14 @@ function init() {
         if (spaceShuttleHeight.innerHTML === 0) {
             spaceShuttleHeight.innerHTML = 10000;
         } else {
-            spaceShuttleHeight.innerHTML = int(spaceShuttleHeight.innerHTML) + 10000;
+            spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) + 10000;
         }
     });
 
     down.addEventListener('click', () => {
         rocket.style.bottom = '10px';
         if (spaceShuttleHeight.innerHTML > 0) {
-            spaceShuttleHeight.innerHTML = int(spaceShuttleHeight.innerHTML) - 10000;
+            spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) - 10000;
         } 
     });
 
