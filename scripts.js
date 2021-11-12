@@ -42,12 +42,18 @@ function init() {
 
     up.addEventListener('click', () => {
         rocket.style.top = '10px';
-        spaceShuttleHeight.innerHTML += 10000;
+        if (spaceShuttleHeight.innerHTML === 0) {
+            spaceShuttleHeight.innerHTML = 10000;
+        } else {
+            spaceShuttleHeight.innerHTML += 10000;
+        }
     });
 
     down.addEventListener('click', () => {
         rocket.style.bottom = '10px';
-        spaceShuttleHeight.innerHTML -= 10000;
+        if (spaceShuttleHeight.innerHTML > 0) {
+            spaceShuttleHeight.innerHTML -= 10000;
+        } 
     });
 
     right.addEventListener('click', () => {
