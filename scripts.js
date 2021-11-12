@@ -42,8 +42,8 @@ function init() {
         }
     });
 
-    up.addEventListener('click', (event) => {
-        height += 10
+    up.addEventListener('click', () => {
+        height += 10;
         rocket.style.bottom = `${height}px`;
         if (spaceShuttleHeight.innerHTML === 0) {
             spaceShuttleHeight.innerHTML = 10000;
@@ -52,21 +52,21 @@ function init() {
         }
     });
 
-    down.addEventListener('click', (event) => {
-        height -= 10
+    down.addEventListener('click', () => {
+        height -= 10;
         rocket.style.bottom = `${height}px`;
         if (spaceShuttleHeight.innerHTML > 0) {
             spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) - 10000;
         } 
     });
 
-    right.addEventListener('click', (event) => {
-        left += 10
+    right.addEventListener('click', () => {
+        left += 10;
         rocket.style.left = `${left}px`;
     });
 
-    left.addEventListener('click', (event) => {
-        left -= 10
+    left.addEventListener('click', () => {
+        left -= 10;
         rocket.style.left = `${left}px`;
     });
 }
