@@ -42,12 +42,12 @@ function init() {
 
     up.addEventListener('click', () => {
         rocket.style.top = '10px';
-        flightStatus.innerHTML += 10000;
+        spaceShuttleHeight.innerHTML += 10000;
     });
 
     down.addEventListener('click', () => {
         rocket.style.bottom = '10px';
-        flightStatus.innerHTML -= 10000;
+        spaceShuttleHeight.innerHTML -= 10000;
     });
 
     right.addEventListener('click', () => {
