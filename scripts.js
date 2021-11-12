@@ -12,7 +12,7 @@ function init() {
     const flightStatus = document.getElementById('flightStatus');
     const shuttleBackground = document.getElementById('shuttleBackground');
     const spaceShuttleHeight = document.getElementById('spaceShuttleHeight');
-    let height = 0;
+    let top = 0;
     let left = 0;
 
     takeOff.addEventListener('click', () => {
@@ -43,7 +43,7 @@ function init() {
     });
 
     up.addEventListener('click', () => {
-        height += 10;
+        top += 10;
         rocket.style.bottom = `${height}px`;
         if (spaceShuttleHeight.innerHTML === 0) {
             spaceShuttleHeight.innerHTML = 10000;
@@ -53,7 +53,7 @@ function init() {
     });
 
     down.addEventListener('click', () => {
-        height -= 10;
+        top -= 10;
         rocket.style.bottom = `${height}px`;
         if (spaceShuttleHeight.innerHTML > 0) {
             spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) - 10000;
