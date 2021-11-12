@@ -12,6 +12,8 @@ function init() {
     const flightStatus = document.getElementById('flightStatus');
     const shuttleBackground = document.getElementById('shuttleBackground');
     const spaceShuttleHeight = document.getElementById('spaceShuttleHeight');
+    let height = 0;
+    let left = 0;
 
     takeOff.addEventListener('click', () => {
         let response = window.confirm('Confirm that the shuttle is ready for takeoff.');
@@ -40,8 +42,9 @@ function init() {
         }
     });
 
-    up.addEventListener('click', () => {
-        rocket.style.top = '10px';
+    up.addEventListener('click', (event) => {
+        height += 10
+        rocket.style.bottom = `${height}px`;
         if (spaceShuttleHeight.innerHTML === 0) {
             spaceShuttleHeight.innerHTML = 10000;
         } else {
@@ -49,19 +52,22 @@ function init() {
         }
     });
 
-    down.addEventListener('click', () => {
-        rocket.style.bottom = '10px';
+    down.addEventListener('click', (event) => {
+        height -= 10
+        rocket.style.bottom = `${height}px`;
         if (spaceShuttleHeight.innerHTML > 0) {
             spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) - 10000;
         } 
     });
 
-    right.addEventListener('click', () => {
-        rocket.style.right = '10px';
+    right.addEventListener('click', (event) => {
+        left += 10
+        rocket.style.left = `${left}px`;
     });
 
-    left.addEventListener('click', () => {
-        rocket.style.left = '10px';
+    left.addEventListener('click', (event) => {
+        left -= 10
+        rocket.style.left = `${left}px`;
     });
 }
 
