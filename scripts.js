@@ -44,7 +44,7 @@ function init() {
 
     up.addEventListener('click', () => {
         top += 10;
-        rocket.style.bottom = `${height}px`;
+        rocket.style.bottom = `${top}px`;
         if (spaceShuttleHeight.innerHTML === 0) {
             spaceShuttleHeight.innerHTML = 10000;
         } else {
@@ -54,7 +54,7 @@ function init() {
 
     down.addEventListener('click', () => {
         top -= 10;
-        rocket.style.bottom = `${height}px`;
+        rocket.style.bottom = `${top}px`;
         if (spaceShuttleHeight.innerHTML > 0) {
             spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) - 10000;
         } 
