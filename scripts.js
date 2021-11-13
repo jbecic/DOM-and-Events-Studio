@@ -52,12 +52,14 @@ function init() {
     });
 
     up.addEventListener('click', () => {
-        vertical += 10;
-        rocket.style.bottom = `${vertical}px`;
-        if (spaceShuttleHeight.innerHTML === 0) {
-            spaceShuttleHeight.innerHTML = 10000;
-        } else {
-            spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) + 10000;
+        if (rocket.style.bottom < `${shuttleBackground.clientHeight}px`) {
+            vertical += 10;
+            rocket.style.bottom = `${vertical}px`;
+            if (spaceShuttleHeight.innerHTML === 0) {
+                spaceShuttleHeight.innerHTML = 10000;
+            } else {
+                spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) + 10000;
+            }
         }
     });
 
@@ -70,13 +72,17 @@ function init() {
     });
 
     right.addEventListener('click', () => {
-        horizontal += 10;
-        rocket.style.left = `${horizontal}px`;
+        if (rocket.style.left < `${shuttleBackground.clientWidth}px`) {
+            horizontal += 10;
+            rocket.style.left = `${horizontal}px`;
+        }
     });
 
     left.addEventListener('click', () => {
-        horizontal -= 10;
-        rocket.style.left = `${horizontal}px`;
+        if (rocket.style.left > '0px') {
+            horizontal -= 10;
+            rocket.style.left = `${horizontal}px`;
+        }
     });
 }
 
